@@ -37,6 +37,7 @@ import javax.sql.PooledConnection;
 import com.mysql.jdbc.ExceptionInterceptor;
 import com.mysql.jdbc.SQLError;
 import com.mysql.jdbc.Util;
+import javax.sql.StatementEventListener;
 
 /**
  * This class is used to wrap and return a physical connection within a logical handle. It also registers and notifies ConnectionEventListeners of any
@@ -229,5 +230,13 @@ public class MysqlPooledConnection implements PooledConnection {
 
     protected ExceptionInterceptor getExceptionInterceptor() {
         return this.exceptionInterceptor;
+    }
+
+    @Override public void addStatementEventListener(StatementEventListener listener) {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public void removeStatementEventListener(StatementEventListener listener) {
+        throw new UnsupportedOperationException();
     }
 }

@@ -33,14 +33,11 @@ import java.nio.ByteBuffer;
 import java.nio.CharBuffer;
 import java.nio.charset.Charset;
 import java.nio.charset.CharsetEncoder;
+import java.sql.*;
 import java.sql.Blob;
+import java.sql.Clob;
 import java.sql.DatabaseMetaData;
-import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
-import java.sql.SQLException;
-import java.sql.SQLPermission;
-import java.sql.SQLWarning;
-import java.sql.Savepoint;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Collections;
@@ -5549,5 +5546,58 @@ public class ConnectionImpl extends ConnectionPropertiesImpl implements MySQLCon
 
     public void setProfilerEventHandlerInstance(ProfilerEventHandler h) {
         this.eventSink = h;
+    }
+
+    @Override public java.sql.Array createArrayOf(String typeName, Object[] elements)
+        throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public Clob createClob() throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public Blob createBlob() throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public NClob createNClob() throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public SQLXML createSQLXML() throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public boolean isValid(int timeout) throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public void setClientInfo(String name, String value) throws SQLClientInfoException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public void setClientInfo(Properties properties) throws SQLClientInfoException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public String getClientInfo(String name) throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public Properties getClientInfo() throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public Struct createStruct(String typeName, Object[] attributes) throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public <T> T unwrap(Class<T> iface) throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public boolean isWrapperFor(Class<?> iface) throws SQLException {
+        throw new UnsupportedOperationException();
     }
 }

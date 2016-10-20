@@ -27,6 +27,7 @@ import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.ObjectInputStream;
+import java.io.Reader;
 import java.io.StringReader;
 import java.io.UnsupportedEncodingException;
 import java.lang.reflect.Constructor;
@@ -36,9 +37,12 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.sql.Array;
 import java.sql.Date;
+import java.sql.NClob;
 import java.sql.Ref;
+import java.sql.RowId;
 import java.sql.SQLException;
 import java.sql.SQLWarning;
+import java.sql.SQLXML;
 import java.sql.Time;
 import java.sql.Timestamp;
 import java.sql.Types;
@@ -7905,5 +7909,219 @@ public class ResultSetImpl implements ResultSetInternalMethods {
 
     protected ExceptionInterceptor getExceptionInterceptor() {
         return this.exceptionInterceptor;
+    }
+
+    @Override public int getHoldability() throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public RowId getRowId(int columnIndex) throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public RowId getRowId(String columnLabel) throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public void updateRowId(int columnIndex, RowId x) throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public void updateRowId(String columnLabel, RowId x) throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public void updateNString(int columnIndex, String nString) throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public void updateNString(String columnLabel, String nString) throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public void updateNClob(int columnIndex, NClob nClob) throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public void updateNClob(String columnLabel, NClob nClob) throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public NClob getNClob(int columnIndex) throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public NClob getNClob(String columnLabel) throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public SQLXML getSQLXML(int columnIndex) throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public SQLXML getSQLXML(String columnLabel) throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public void updateSQLXML(int columnIndex, SQLXML xmlObject) throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public void updateSQLXML(String columnLabel, SQLXML xmlObject) throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public String getNString(int columnIndex) throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public String getNString(String columnLabel) throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public Reader getNCharacterStream(int columnIndex) throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public Reader getNCharacterStream(String columnLabel) throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public void updateNCharacterStream(int columnIndex, Reader x, long length)
+        throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public void updateNCharacterStream(String columnLabel, Reader reader, long length)
+        throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public void updateAsciiStream(int columnIndex, InputStream x, long length)
+        throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public void updateBinaryStream(int columnIndex, InputStream x, long length)
+        throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public void updateCharacterStream(int columnIndex, Reader x, long length)
+        throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public void updateAsciiStream(String columnLabel, InputStream x, long length)
+        throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public void updateBinaryStream(String columnLabel, InputStream x, long length)
+        throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public void updateCharacterStream(String columnLabel, Reader reader, long length)
+        throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public void updateBlob(int columnIndex, InputStream inputStream, long length)
+        throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public void updateBlob(String columnLabel, InputStream inputStream, long length)
+        throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public void updateClob(int columnIndex, Reader reader, long length)
+        throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public void updateClob(String columnLabel, Reader reader, long length)
+        throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public void updateNClob(int columnIndex, Reader reader, long length)
+        throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public void updateNClob(String columnLabel, Reader reader, long length)
+        throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public void updateNCharacterStream(int columnIndex, Reader x) throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public void updateNCharacterStream(String columnLabel, Reader reader)
+        throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public void updateAsciiStream(int columnIndex, InputStream x) throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public void updateBinaryStream(int columnIndex, InputStream x) throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public void updateCharacterStream(int columnIndex, Reader x) throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public void updateAsciiStream(String columnLabel, InputStream x) throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public void updateBinaryStream(String columnLabel, InputStream x)
+        throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public void updateCharacterStream(String columnLabel, Reader reader)
+        throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public void updateBlob(int columnIndex, InputStream inputStream) throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public void updateBlob(String columnLabel, InputStream inputStream)
+        throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public void updateClob(int columnIndex, Reader reader) throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public void updateClob(String columnLabel, Reader reader) throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public void updateNClob(int columnIndex, Reader reader) throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public void updateNClob(String columnLabel, Reader reader) throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public <T> T unwrap(Class<T> iface) throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public boolean isWrapperFor(Class<?> iface) throws SQLException {
+        throw new UnsupportedOperationException();
     }
 }

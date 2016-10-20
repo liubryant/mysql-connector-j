@@ -34,6 +34,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import javax.sql.StatementEventListener;
 import javax.sql.XAConnection;
 import javax.transaction.xa.XAException;
 import javax.transaction.xa.XAResource;
@@ -613,5 +614,13 @@ public class MysqlXAConnection extends MysqlPooledConnection implements XAConnec
         Connection connToWrap = getConnection(false, true);
 
         return connToWrap;
+    }
+
+    @Override public void addStatementEventListener(StatementEventListener listener) {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public void removeStatementEventListener(StatementEventListener listener) {
+        throw new UnsupportedOperationException();
     }
 }

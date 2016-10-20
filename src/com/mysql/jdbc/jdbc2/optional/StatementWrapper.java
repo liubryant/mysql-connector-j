@@ -722,4 +722,32 @@ public class StatementWrapper extends WrapperBase implements Statement {
             checkAndFireConnectionError(sqlEx);
         }
     }
+
+    @Override public void closeOnCompletion() throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public boolean isClosed() throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public void setPoolable(boolean poolable) throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public boolean isPoolable() throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public boolean isCloseOnCompletion() throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public <T> T unwrap(Class<T> iface) throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public boolean isWrapperFor(Class<?> iface) throws SQLException {
+        throw new UnsupportedOperationException();
+    }
 }

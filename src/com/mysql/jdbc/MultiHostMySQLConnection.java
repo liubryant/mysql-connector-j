@@ -23,12 +23,12 @@
 
 package com.mysql.jdbc;
 
+import java.sql.*;
+import java.sql.Blob;
 import java.sql.CallableStatement;
+import java.sql.Clob;
 import java.sql.DatabaseMetaData;
 import java.sql.PreparedStatement;
-import java.sql.SQLException;
-import java.sql.SQLWarning;
-import java.sql.Savepoint;
 import java.sql.Statement;
 import java.util.Calendar;
 import java.util.List;
@@ -2481,5 +2481,57 @@ public class MultiHostMySQLConnection implements MySQLConnection {
 
     public boolean isUseSSLExplicit() {
         return getActiveMySQLConnection().isUseSSLExplicit();
+    }
+
+    @Override public Array createArrayOf(String typeName, Object[] elements) throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public Clob createClob() throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public Blob createBlob() throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public NClob createNClob() throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public SQLXML createSQLXML() throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public boolean isValid(int timeout) throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public void setClientInfo(String name, String value) throws SQLClientInfoException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public void setClientInfo(Properties properties) throws SQLClientInfoException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public String getClientInfo(String name) throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public Properties getClientInfo() throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public Struct createStruct(String typeName, Object[] attributes) throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public <T> T unwrap(Class<T> iface) throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public boolean isWrapperFor(Class<?> iface) throws SQLException {
+        throw new UnsupportedOperationException();
     }
 }

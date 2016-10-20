@@ -33,10 +33,13 @@ import java.sql.Array;
 import java.sql.Blob;
 import java.sql.Clob;
 import java.sql.Date;
+import java.sql.NClob;
 import java.sql.ParameterMetaData;
 import java.sql.Ref;
 import java.sql.ResultSet;
+import java.sql.RowId;
 import java.sql.SQLException;
+import java.sql.SQLXML;
 import java.sql.Time;
 import java.sql.Timestamp;
 import java.sql.Types;
@@ -2418,5 +2421,78 @@ public class CallableStatement extends PreparedStatement implements java.sql.Cal
         }
 
         return super.executeLargeBatch();
+    }
+
+    @Override public Reader getCharacterStream(int parameterIndex) throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public RowId getRowId(int parameterIndex) throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public RowId getRowId(String parameterName) throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public void setRowId(String parameterName, RowId x) throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public void setNString(String parameterName, String value) throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public void setNClob(String parameterName, NClob value) throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public void setNClob(String parameterName, Reader reader, long length)
+        throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public NClob getNClob(int parameterIndex) throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public NClob getNClob(String parameterName) throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public void setSQLXML(String parameterName, SQLXML xmlObject) throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public SQLXML getSQLXML(int parameterIndex) throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public SQLXML getSQLXML(String parameterName) throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public String getNString(int parameterIndex) throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public String getNString(String parameterName) throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public Reader getNCharacterStream(int parameterIndex) throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public Reader getNCharacterStream(String parameterName) throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public Reader getCharacterStream(String parameterName) throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public void setNClob(String parameterName, Reader reader) throws SQLException {
+        throw new UnsupportedOperationException();
     }
 }

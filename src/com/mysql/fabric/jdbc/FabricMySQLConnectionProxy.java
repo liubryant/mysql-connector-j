@@ -23,13 +23,20 @@
 
 package com.mysql.fabric.jdbc;
 
+import java.sql.Array;
+import java.sql.Blob;
 import java.sql.CallableStatement;
+import java.sql.Clob;
 import java.sql.DatabaseMetaData;
+import java.sql.NClob;
 import java.sql.PreparedStatement;
+import java.sql.SQLClientInfoException;
 import java.sql.SQLException;
 import java.sql.SQLWarning;
+import java.sql.SQLXML;
 import java.sql.Savepoint;
 import java.sql.Statement;
+import java.sql.Struct;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Collections;
@@ -3049,5 +3056,37 @@ public class FabricMySQLConnectionProxy extends ConnectionPropertiesImpl impleme
     }
 
     public void decachePreparedStatement(ServerPreparedStatement pstmt) throws SQLException {
+    }
+
+    @Override public Array createArrayOf(String typeName, Object[] elements) throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public Clob createClob() throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public Blob createBlob() throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public NClob createNClob() throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public SQLXML createSQLXML() throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public void setClientInfo(String name, String value) throws SQLClientInfoException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public void setClientInfo(Properties properties) throws SQLClientInfoException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public Struct createStruct(String typeName, Object[] attributes) throws SQLException {
+        throw new UnsupportedOperationException();
     }
 }

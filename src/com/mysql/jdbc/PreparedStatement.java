@@ -43,9 +43,12 @@ import java.sql.Array;
 import java.sql.Clob;
 import java.sql.DatabaseMetaData;
 import java.sql.Date;
+import java.sql.NClob;
 import java.sql.ParameterMetaData;
 import java.sql.Ref;
+import java.sql.RowId;
 import java.sql.SQLException;
+import java.sql.SQLXML;
 import java.sql.Time;
 import java.sql.Timestamp;
 import java.sql.Types;
@@ -5096,5 +5099,17 @@ public class PreparedStatement extends com.mysql.jdbc.StatementImpl implements j
      */
     public long executeLargeUpdate() throws SQLException {
         return executeUpdateInternal(true, false);
+    }
+
+    @Override public void setNClob(int parameterIndex, NClob value) throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public void setRowId(int parameterIndex, RowId x) throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public void setSQLXML(int parameterIndex, SQLXML xmlObject) throws SQLException {
+        throw new UnsupportedOperationException();
     }
 }

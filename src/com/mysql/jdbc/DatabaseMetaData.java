@@ -30,6 +30,7 @@ import java.io.UnsupportedEncodingException;
 import java.lang.reflect.Constructor;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.RowIdLifetime;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.sql.Types;
@@ -7903,5 +7904,21 @@ public class DatabaseMetaData implements java.sql.DatabaseMetaData {
     // JDBC-4.1
     public boolean generatedKeyAlwaysReturned() throws SQLException {
         return true;
+    }
+
+    @Override public boolean autoCommitFailureClosesAllResultSets() throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public RowIdLifetime getRowIdLifetime() throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public <T> T unwrap(Class<T> iface) throws SQLException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override public boolean isWrapperFor(Class<?> iface) throws SQLException {
+        throw new UnsupportedOperationException();
     }
 }
